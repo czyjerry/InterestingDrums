@@ -16,6 +16,8 @@ MainContentComponent::MainContentComponent()
 
 	setWantsKeyboardFocus(true);
 	kp = new KeyPress(KeyPress::escapeKey);
+
+	StartGameLoop();
 }
 
 MainContentComponent::~MainContentComponent()
@@ -43,4 +45,9 @@ void MainContentComponent::resized()
     // update their positions.
 	Desktop& desktop = Desktop::getInstance();
 	desktop.setKioskModeComponent(getTopLevelComponent());
+}
+
+void MainContentComponent::StartGameLoop()
+{
+
 }

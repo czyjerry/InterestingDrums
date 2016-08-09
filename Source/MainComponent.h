@@ -27,6 +27,8 @@ public:
     void paint (Graphics&) override;
     void resized() override;
 
+	void StartGameLoop();
+
 private:
     //==============================================================================
 

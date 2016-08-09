@@ -20,6 +20,9 @@
     <Filter Include="InterestingDrums\Source">
       <UniqueIdentifier>{9C0CA173-ACD1-C027-AE26-EDE904400FB4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="InterestingDrums\Source\Headers">
+      <UniqueIdentifier>{A2DDBA8B-6111-F8B6-36DD-7FB943A4FC01}</UniqueIdentifier>
+    </Filter>
     <Filter Include="InterestingDrums\Source\Utility">
       <UniqueIdentifier>{09527840-764C-0967-FBF1-1797B63613A2}</UniqueIdentifier>
     </Filter>
