@@ -41,6 +41,7 @@
         <MODULEPATH id="juce_audio_devices" path="..\..\juce-grapefruit-windows\JUCE\modules"/>
         <MODULEPATH id="juce_audio_formats" path="..\..\juce-grapefruit-windows\JUCE\modules"/>
         <MODULEPATH id="juce_audio_processors" path="..\..\juce-grapefruit-windows\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../juce-grapefruit-windows/JUCE/modules"/>
       </MODULEPATHS>
     </VS2015>
     <VS2013 targetFolder="Builds/VisualStudio2013">
@@ -64,6 +65,7 @@
         <MODULEPATH id="juce_audio_devices" path="..\..\juce-grapefruit-windows\JUCE\modules"/>
         <MODULEPATH id="juce_audio_formats" path="..\..\juce-grapefruit-windows\JUCE\modules"/>
         <MODULEPATH id="juce_audio_processors" path="..\..\juce-grapefruit-windows\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../juce-grapefruit-windows/JUCE/modules"/>
       </MODULEPATHS>
     </VS2013>
   </EXPORTFORMATS>
@@ -72,6 +74,7 @@
     <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="1"/>
     <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="1"/>
     <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="1"/>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="1"/>
     <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="1"/>
     <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="1"/>
@@ -83,4 +86,7 @@
     <MODULE id="juce_video" showAllCode="1" useLocalCopy="1"/>
   </MODULES>
   <JUCEOPTIONS/>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+  </LIVE_SETTINGS>
 </JUCERPROJECT>
