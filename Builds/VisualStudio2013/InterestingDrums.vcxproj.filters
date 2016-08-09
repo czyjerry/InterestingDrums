@@ -8,8 +8,26 @@
     <Filter Include="InterestingDrums\Resource">
       <UniqueIdentifier>{16183EA8-BBCC-5222-7044-542CF4BFDD9E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="InterestingDrums\Resource\Model">
+      <UniqueIdentifier>{412304AB-6971-59E8-367C-7EBB37906107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InterestingDrums\Resource\Image">
+      <UniqueIdentifier>{D7F52207-2D4D-3A60-0081-0EA8494800E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InterestingDrums\Resource\Audio">
+      <UniqueIdentifier>{CD001654-E4BF-0DC0-6339-871130741B84}</UniqueIdentifier>
+    </Filter>
     <Filter Include="InterestingDrums\Source">
       <UniqueIdentifier>{9C0CA173-ACD1-C027-AE26-EDE904400FB4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InterestingDrums\Source\Utility">
+      <UniqueIdentifier>{09527840-764C-0967-FBF1-1797B63613A2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InterestingDrums\Source\Sound">
+      <UniqueIdentifier>{279D2A67-93D0-4515-2563-62F28933D5D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InterestingDrums\Source\View">
+      <UniqueIdentifier>{82827A1C-ADFC-553D-3117-FE837AC45C09}</UniqueIdentifier>
     </Filter>
     <Filter Include="Juce Modules">
       <UniqueIdentifier>{422C46B7-0467-2DB0-BF3C-16DFCAFD69AC}</UniqueIdentifier>

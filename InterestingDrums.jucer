@@ -4,8 +4,15 @@
               bundleIdentifier="com.yourcompany.InterestingDrums" includeBinaryInAppConfig="1"
               jucerVersion="4.2.3">
   <MAINGROUP id="Wv1IPE" name="InterestingDrums">
-    <GROUP id="{D250C09E-E057-BA6A-59FC-11FD8ABDA149}" name="Resource"/>
+    <GROUP id="{D250C09E-E057-BA6A-59FC-11FD8ABDA149}" name="Resource">
+      <GROUP id="{4506A4E6-93B6-D4F6-364F-992D6677A925}" name="Model"/>
+      <GROUP id="{B2C40997-7FBE-9ECA-4427-2196BE6DA107}" name="Image"/>
+      <GROUP id="{1B0F795A-DA32-AD89-6F8E-3E4DCE6885F5}" name="Audio"/>
+    </GROUP>
     <GROUP id="{1E2B7FF4-1314-02E4-D867-833003E9965E}" name="Source">
+      <GROUP id="{41B67478-7366-9785-B9E0-02F91228DDE1}" name="Utility"/>
+      <GROUP id="{6B163586-3089-EF6A-50DB-BAA0B8DCC568}" name="Sound"/>
+      <GROUP id="{F464643E-28E7-B66A-28F2-340C9657B3D7}" name="View"/>
       <FILE id="rMwCjg" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
       <FILE id="M1J1vY" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
