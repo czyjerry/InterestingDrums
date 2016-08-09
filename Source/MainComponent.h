@@ -29,6 +29,11 @@ public:
 
 private:
     //==============================================================================
+
+	bool keyPressed(const KeyPress&);
+
+	KeyPress *kp;
+
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainContentComponent)
 };
 

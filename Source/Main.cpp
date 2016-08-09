@@ -62,7 +62,7 @@ public:
     {
     public:
         MainWindow (String name)  : DocumentWindow (name,
-                                                    Colours::lightgrey,
+                                                    Colours::black,
                                                     DocumentWindow::allButtons)
         {
             setUsingNativeTitleBar (true);
@@ -70,7 +70,21 @@ public:
 
             centreWithSize (getWidth(), getHeight());
             setVisible (true);
+			setAlwaysOnTop(true);
+
+			Desktop& desktop = Desktop::getInstance();
+			desktop.setKioskModeComponent(getTopLevelComponent());
         }
+
+		void activeWindowStatusChanged() override
+		{
+			if (isActiveWindow())
+			{
+				Desktop& desktop = Desktop::getInstance();
+				desktop.setKioskModeComponent(getTopLevelComponent());
+			}
+			ResizableWindow::activeWindowStatusChanged();
+		}
 
         void closeButtonPressed() override
         {

@@ -13,19 +13,27 @@
 MainContentComponent::MainContentComponent()
 {
     setSize (600, 400);
+
+	setWantsKeyboardFocus(true);
+	kp = new KeyPress(KeyPress::escapeKey);
 }
 
 MainContentComponent::~MainContentComponent()
 {
 }
 
+bool MainContentComponent::keyPressed(const KeyPress &key)
+{
+	if (*kp == key)
+	{
+		JUCEApplication::getInstance()->systemRequestedQuit();
+	}
+	return true;
+}
+
 void MainContentComponent::paint (Graphics& g)
 {
-    g.fillAll (Colour (0xff001F36));
-
-    g.setFont (Font (16.0f));
-    g.setColour (Colours::white);
-    g.drawText ("Hello World!", getLocalBounds(), Justification::centred, true);
+	grabKeyboardFocus();
 }
 
 void MainContentComponent::resized()
@@ -33,4 +41,6 @@ void MainContentComponent::resized()
     // This is called when the MainContentComponent is resized.
     // If you add any child components, this is where you should
     // update their positions.
+	Desktop& desktop = Desktop::getInstance();
+	desktop.setKioskModeComponent(getTopLevelComponent());
 }
