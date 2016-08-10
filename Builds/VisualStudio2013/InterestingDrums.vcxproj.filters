@@ -391,6 +391,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\SensorControllerCore.cpp">
+      <Filter>InterestingDrums\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DataModelCore.cpp">
+      <Filter>InterestingDrums\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Utility\HTTPTools.cpp">
+      <Filter>InterestingDrums\Source\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Sound\JuceAudioCore.cpp">
+      <Filter>InterestingDrums\Source\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\View\GlViewCore.cpp">
+      <Filter>InterestingDrums\Source\View</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\MainComponent.cpp">
       <Filter>InterestingDrums\Source</Filter>
     </ClCompile>
@@ -2118,6 +2133,24 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Headers\DataModelCore.h">
+      <Filter>InterestingDrums\Source\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Headers\GlViewCore.h">
+      <Filter>InterestingDrums\Source\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Headers\HTTPTools.h">
+      <Filter>InterestingDrums\Source\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Headers\JuceAudioCore.h">
+      <Filter>InterestingDrums\Source\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Headers\ProjectHeader.h">
+      <Filter>InterestingDrums\Source\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Headers\SensorControllerCore.h">
+      <Filter>InterestingDrums\Source\Headers</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">
       <Filter>InterestingDrums\Source</Filter>
     </ClInclude>

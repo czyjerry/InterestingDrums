@@ -10,6 +10,7 @@
 #define MAINCOMPONENT_H_INCLUDED
 
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "Headers/ProjectHeader.h"
 
 
 //==============================================================================
@@ -27,6 +28,8 @@ public:
     void paint (Graphics&) override;
     void resized() override;
 
+	void SetHttpTools(ScopedPointer<HTTPTools>);
+	void SetSensorController(ScopedPointer<SensorControllerCore>);
 	void StartGameLoop();
 
 private:
@@ -35,6 +38,13 @@ private:
 	bool keyPressed(const KeyPress&);
 
 	KeyPress *kp;
+
+	ScopedPointer<HTTPTools> m_http;
+	ScopedPointer<SensorControllerCore> m_kinect;
+	ScopedPointer<DataModelCore> m_data;
+	ScopedPointer<GlViewCore> m_view;
+	ScopedPointer<JuceAudioCore> m_audio;
+
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainContentComponent)
 };

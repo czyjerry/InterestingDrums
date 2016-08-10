@@ -7,17 +7,16 @@
 */
 
 #include "MainComponent.h"
+#include "Headers/ProjectHeader.h"
 
 
 //==============================================================================
 MainContentComponent::MainContentComponent()
 {
-    setSize (600, 400);
+	setSize(600, 400);
 
 	setWantsKeyboardFocus(true);
 	kp = new KeyPress(KeyPress::escapeKey);
-
-	StartGameLoop();
 }
 
 MainContentComponent::~MainContentComponent()
@@ -47,7 +46,19 @@ void MainContentComponent::resized()
 	desktop.setKioskModeComponent(getTopLevelComponent());
 }
 
+void MainContentComponent::SetHttpTools(ScopedPointer<HTTPTools> ht)
+{
+	m_http = ht;
+}
+
+void MainContentComponent::SetSensorController(ScopedPointer<SensorControllerCore> scc)
+{
+	m_kinect = scc;
+}
+
 void MainContentComponent::StartGameLoop()
 {
-
+	m_data = new DataModelCore(m_http, m_kinect);
+	m_audio = new JuceAudioCore(m_data);
+	m_view = new GlViewCore(m_data);
 }

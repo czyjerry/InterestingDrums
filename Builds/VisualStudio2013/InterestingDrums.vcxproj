@@ -129,6 +129,11 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\SensorControllerCore.cpp"/>
+    <ClCompile Include="..\..\Source\DataModelCore.cpp"/>
+    <ClCompile Include="..\..\Source\Utility\HTTPTools.cpp"/>
+    <ClCompile Include="..\..\Source\Sound\JuceAudioCore.cpp"/>
+    <ClCompile Include="..\..\Source\View\GlViewCore.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioDataConverters.cpp">
@@ -1701,6 +1706,12 @@
     <ClCompile Include="..\..\JuceLibraryCode\juce_video.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Headers\DataModelCore.h"/>
+    <ClInclude Include="..\..\Source\Headers\GlViewCore.h"/>
+    <ClInclude Include="..\..\Source\Headers\HTTPTools.h"/>
+    <ClInclude Include="..\..\Source\Headers\JuceAudioCore.h"/>
+    <ClInclude Include="..\..\Source\Headers\ProjectHeader.h"/>
+    <ClInclude Include="..\..\Source\Headers\SensorControllerCore.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\modules\juce_audio_basics\buffers\juce_AudioSampleBuffer.h"/>

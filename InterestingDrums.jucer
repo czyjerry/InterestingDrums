@@ -10,10 +10,29 @@
       <GROUP id="{1B0F795A-DA32-AD89-6F8E-3E4DCE6885F5}" name="Audio"/>
     </GROUP>
     <GROUP id="{1E2B7FF4-1314-02E4-D867-833003E9965E}" name="Source">
-      <GROUP id="{C11113CC-0CCC-79C0-CB8D-21D59D747008}" name="Headers"/>
-      <GROUP id="{41B67478-7366-9785-B9E0-02F91228DDE1}" name="Utility"/>
-      <GROUP id="{6B163586-3089-EF6A-50DB-BAA0B8DCC568}" name="Sound"/>
-      <GROUP id="{F464643E-28E7-B66A-28F2-340C9657B3D7}" name="View"/>
+      <FILE id="azTnEj" name="SensorControllerCore.cpp" compile="1" resource="0"
+            file="Source/SensorControllerCore.cpp"/>
+      <FILE id="nR2ESM" name="DataModelCore.cpp" compile="1" resource="0"
+            file="Source/DataModelCore.cpp"/>
+      <GROUP id="{C11113CC-0CCC-79C0-CB8D-21D59D747008}" name="Headers">
+        <FILE id="zWbGPe" name="DataModelCore.h" compile="0" resource="0" file="Source/Headers/DataModelCore.h"/>
+        <FILE id="r9Jy9T" name="GlViewCore.h" compile="0" resource="0" file="Source/Headers/GlViewCore.h"/>
+        <FILE id="ibYVxb" name="HTTPTools.h" compile="0" resource="0" file="Source/Headers/HTTPTools.h"/>
+        <FILE id="uoRe4a" name="JuceAudioCore.h" compile="0" resource="0" file="Source/Headers/JuceAudioCore.h"/>
+        <FILE id="aZvZHm" name="ProjectHeader.h" compile="0" resource="0" file="Source/Headers/ProjectHeader.h"/>
+        <FILE id="CrX6lb" name="SensorControllerCore.h" compile="0" resource="0"
+              file="Source/Headers/SensorControllerCore.h"/>
+      </GROUP>
+      <GROUP id="{41B67478-7366-9785-B9E0-02F91228DDE1}" name="Utility">
+        <FILE id="unkP4q" name="HTTPTools.cpp" compile="1" resource="0" file="Source/Utility/HTTPTools.cpp"/>
+      </GROUP>
+      <GROUP id="{6B163586-3089-EF6A-50DB-BAA0B8DCC568}" name="Sound">
+        <FILE id="pGbrls" name="JuceAudioCore.cpp" compile="1" resource="0"
+              file="Source/Sound/JuceAudioCore.cpp"/>
+      </GROUP>
+      <GROUP id="{F464643E-28E7-B66A-28F2-340C9657B3D7}" name="View">
+        <FILE id="WHMXRH" name="GlViewCore.cpp" compile="1" resource="0" file="Source/View/GlViewCore.cpp"/>
+      </GROUP>
       <FILE id="rMwCjg" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
       <FILE id="M1J1vY" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>

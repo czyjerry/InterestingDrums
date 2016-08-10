@@ -9,6 +9,7 @@
 */
 
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "Headers/ProjectHeader.h"
 #include "MainComponent.h"
 
 
@@ -27,8 +28,16 @@ public:
     void initialise (const String& commandLine) override
     {
         // This method is where you should put your application's initialisation code..
-
-        mainWindow = new MainWindow (getApplicationName());
+		ScopedPointer<HTTPTools> ht = new HTTPTools();
+		ScopedPointer<SensorControllerCore> scc = new SensorControllerCore();
+		if (scc->check())
+		{
+			if (ht->SetLoginParams(getCommandLineParameterArray()))
+			{
+				mainWindow = new MainWindow(getApplicationName());
+				mainWindow->InitAndShow(ht, scc);
+			}
+		}
     }
 
     void shutdown() override
@@ -66,15 +75,24 @@ public:
                                                     DocumentWindow::allButtons)
         {
             setUsingNativeTitleBar (true);
-            setContentOwned (new MainContentComponent(), true);
+        }
+		
+		void InitAndShow(ScopedPointer<HTTPTools> ht, ScopedPointer<SensorControllerCore> scc)
+		{
+			MainContentComponent *mcc = new MainContentComponent();
+			mcc->SetHttpTools(ht);
+			mcc->SetSensorController(scc);
+			setContentOwned(mcc, true);
 
-            centreWithSize (getWidth(), getHeight());
-            setVisible (true);
+			centreWithSize(getWidth(), getHeight());
 			setAlwaysOnTop(true);
+			setVisible(true);
 
 			Desktop& desktop = Desktop::getInstance();
 			desktop.setKioskModeComponent(getTopLevelComponent());
-        }
+
+			mcc->StartGameLoop();
+		}
 
 		void activeWindowStatusChanged() override
 		{
