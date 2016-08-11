@@ -28,14 +28,14 @@ public:
     void initialise (const String& commandLine) override
     {
         // This method is where you should put your application's initialisation code..
-		ScopedPointer<HTTPTools> ht = new HTTPTools();
-		ScopedPointer<SensorControllerCore> scc = new SensorControllerCore();
+		ReferenceCountedObjectPtr<SensorControllerCore> scc = new SensorControllerCore();
+		ReferenceCountedObjectPtr<DataModelCore> dmc = new DataModelCore(scc);
 		if (scc->check())
 		{
-			if (ht->SetLoginParams(getCommandLineParameterArray()))
+			if (dmc->SetLoginParams(getCommandLineParameterArray()))
 			{
 				mainWindow = new MainWindow(getApplicationName());
-				mainWindow->InitAndShow(ht, scc);
+				mainWindow->InitAndShow(dmc, scc);
 			}
 		}
     }
@@ -77,10 +77,10 @@ public:
             setUsingNativeTitleBar (true);
         }
 		
-		void InitAndShow(ScopedPointer<HTTPTools> ht, ScopedPointer<SensorControllerCore> scc)
+		void InitAndShow(ReferenceCountedObjectPtr<DataModelCore> dmc, ReferenceCountedObjectPtr<SensorControllerCore> scc)
 		{
 			MainContentComponent *mcc = new MainContentComponent();
-			mcc->SetHttpTools(ht);
+			mcc->SetDataModel(dmc);
 			mcc->SetSensorController(scc);
 			setContentOwned(mcc, true);
 
@@ -90,6 +90,8 @@ public:
 
 			Desktop& desktop = Desktop::getInstance();
 			desktop.setKioskModeComponent(getTopLevelComponent());
+
+			ShowCursor(false);
 
 			mcc->StartGameLoop();
 		}

@@ -15,12 +15,22 @@ JuceAudioCore::JuceAudioCore()
 
 }
 
-JuceAudioCore::JuceAudioCore(ScopedPointer<DataModelCore> p_data)
+JuceAudioCore::JuceAudioCore(ReferenceCountedObjectPtr<DataModelCore> p_data)
 {
 	m_data = p_data;
 }
 
 JuceAudioCore::~JuceAudioCore()
+{
+
+}
+
+void JuceAudioCore::Init()
+{
+
+}
+
+void JuceAudioCore::Release()
 {
 
 }

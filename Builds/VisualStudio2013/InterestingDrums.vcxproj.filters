@@ -397,9 +397,6 @@
     <ClCompile Include="..\..\Source\DataModelCore.cpp">
       <Filter>InterestingDrums\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Utility\HTTPTools.cpp">
-      <Filter>InterestingDrums\Source\Utility</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Sound\JuceAudioCore.cpp">
       <Filter>InterestingDrums\Source\Sound</Filter>
     </ClCompile>
@@ -2137,9 +2134,6 @@
       <Filter>InterestingDrums\Source\Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Headers\GlViewCore.h">
-      <Filter>InterestingDrums\Source\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Headers\HTTPTools.h">
       <Filter>InterestingDrums\Source\Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Headers\JuceAudioCore.h">

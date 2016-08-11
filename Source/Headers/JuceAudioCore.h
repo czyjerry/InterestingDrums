@@ -15,15 +15,19 @@
 #include "JuceHeader.h"
 #include "ProjectHeader.h"
 
-class JuceAudioCore
+class JuceAudioCore: public ReferenceCountedObject
 {
 public:
 	JuceAudioCore();
-	JuceAudioCore(ScopedPointer<DataModelCore>);
+	JuceAudioCore(ReferenceCountedObjectPtr<DataModelCore>);
 	~JuceAudioCore();
 
+	//初始化音频设备
+	void Init();
+	//释放音频设备及资源
+	void Release();
 private:
-	ScopedPointer<DataModelCore> m_data;
+	ReferenceCountedObjectPtr<DataModelCore> m_data; //游戏逻辑数据对象安全指针
 };
 
 

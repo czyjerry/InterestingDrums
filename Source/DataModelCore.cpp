@@ -12,13 +12,13 @@
 
 DataModelCore::DataModelCore() : Thread("Data Model Thread")
 {
-
 }
 
-DataModelCore::DataModelCore(ScopedPointer<HTTPTools> p_ht, ScopedPointer<SensorControllerCore> p_scc) : Thread("Data Model Thread")
+DataModelCore::DataModelCore(ReferenceCountedObjectPtr<SensorControllerCore> p_scc) : Thread("Data Model Thread")
 {
-	m_ht  = p_ht;
 	m_scc = p_scc;
+	shouldQuit = false;
+	lastTick = 0;
 }
 
 DataModelCore::~DataModelCore()
@@ -26,7 +26,43 @@ DataModelCore::~DataModelCore()
 
 }
 
+bool DataModelCore::SetLoginParams(StringArray /*sa*/)
+{
+
+	return true;
+}
+
 void DataModelCore::run()
+{
+	while (!threadShouldExit())
+	{
+		if (!shouldQuit)
+		{
+			if(GetTickCount() - lastTick >= 1000 / FPS) GameLoop();
+		}
+		else Sleep(1);
+	}
+}
+
+void DataModelCore::Init(int w, int h)
+{
+	width = w;
+	height = h;
+
+	startThread();
+}
+
+void DataModelCore::Release()
+{
+	stopThread(1000);
+}
+
+bool DataModelCore::CheckQuitMessage()
+{
+	return shouldQuit;
+}
+
+void DataModelCore::GameLoop()
 {
 
 }
