@@ -30,6 +30,7 @@ void GlViewCore::Init()
 	openGLContext.setRenderer(this);
 	openGLContext.attachTo(*this);
 	openGLContext.setComponentPaintingEnabled(false);
+	//openGLContext.setSwapInterval(60);
 	openGLContext.setContinuousRepainting(true);
 }
 

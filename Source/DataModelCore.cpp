@@ -38,7 +38,11 @@ void DataModelCore::run()
 	{
 		if (!shouldQuit)
 		{
-			if(GetTickCount() - lastTick >= 1000 / FPS) GameLoop();
+			if (GetTickCount() - lastTick >= 1000 / FPS)
+			{
+				lastTick = GetTickCount();
+				GameLoop();
+			}
 		}
 		else Sleep(1);
 	}
